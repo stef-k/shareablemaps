@@ -1,0 +1,95 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+// @import 'variables';
+// Bootswatch
+@import "~bootswatch/dist/materia/variables";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Bootswatch
+@import "~bootswatch/dist/materia/bootswatch";
+
+// custom code
+@import "spacing";
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 18px !important;
+}
+
+.app {
+    flex: 1;
+}
+
+// Map tiles size and responsivness
+.maptile {
+    width: 100%;
+    height: 480px;
+}
+
+// Custom hr
+hr {
+border-top: 1px solid #bbb;
+}
+//-------------------
+
+// Quill editor container
+#editor {
+    height: 500px;
+    max-height: 500px;
+}
+
+// iframe no border
+iframe {
+    border: none !important;
+}
+
+// normal font size
+.normal-text {
+    font-size: 1rem;
+}
+
+// Quill editor default font size
+.ql-container {
+    font-size: 1rem!important;
+}
+
+// Limite the autocomplete dropdown
+.bootstrap-autocomplete.dropdown-menu{
+    height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.tag-filter-badge {
+    cursor: pointer;
+}
+
+.light-border-primary {
+    border: 1px solid rgba(33, 150, 243, .1);
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.x175 {
+    font-size: .75rem;
+}
+
+.x1 {
+    font-size: 1rem;
+}
+
+.x1quarter {
+    font-size: 1.25rem;
+}
+
+.x1half {
+    font-size: 1.5rem;
+}
+
+.x2 {
+    font-size: 2rem;
+}
