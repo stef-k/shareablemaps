@@ -119,4 +119,5 @@
         </div>
     </div>
 </div>
+<button  id="toTopBtn" class="btn-link btn btn-sm "><strong>Scroll <i class="fa fa-chevron-up" aria-hidden="true"></i></strong></a>
 @endsection

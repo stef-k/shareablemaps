@@ -26,6 +26,7 @@ export default class Landing {
         this.clearFilter()
         this.bootstrap()
         this.filterByTag()
+        this.scrollToTop()
     }
 
     maptileTpl(data) {
@@ -168,6 +169,13 @@ export default class Landing {
             $('#searchMaps').val('')
             this.bootstrap()
             $('.clearFilter').removeClass('btn-info').addClass('btn-primary')
+        })
+    }
+
+    scrollToTop() {
+        $('#toTopBtn').click(() => {
+            console.log('to top')
+            $(window).scrollTop(0)
         })
     }
 }

@@ -13,6 +13,10 @@
 // custom code
 @import "spacing";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -32,8 +36,9 @@ body {
 
 // Custom hr
 hr {
-border-top: 1px solid #bbb;
+    border-top: 1px solid #bbb;
 }
+
 //-------------------
 
 // Quill editor container
@@ -54,26 +59,29 @@ iframe {
 
 // Quill editor default font size
 .ql-container {
-    font-size: 1rem!important;
+    font-size: 1rem !important;
 }
 
-// Limite the autocomplete dropdown
-.bootstrap-autocomplete.dropdown-menu{
+// Limit the autocomplete dropdown
+.bootstrap-autocomplete.dropdown-menu {
     height: auto;
     max-height: 200px;
     overflow-y: scroll;
 }
 
+// tag filter cursor
 .tag-filter-badge {
     cursor: pointer;
 }
 
+// form borders
 .light-border-primary {
     border: 1px solid rgba(33, 150, 243, .1);
     padding: 6px;
     border-radius: 2px;
 }
 
+// extra custom font sizes
 .x175 {
     font-size: .75rem;
 }
@@ -92,4 +100,15 @@ iframe {
 
 .x2 {
     font-size: 2rem;
+}
+
+// to top
+#toTopBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: .5%;
+    max-width: 140px;
+    width: 100%;
+    font-size: .8rem;
 }
