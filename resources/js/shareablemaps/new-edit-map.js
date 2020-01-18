@@ -160,7 +160,7 @@ export class MapEditor {
 
             axios.post(`${window.shareablemaps.APP_URL}/admin/maps/new`, serialized)
                 .then((response) => {
-                    // window.location = `${window.shareablemaps.APP_URL}${response.data.mapid}`
+                    window.location = `${window.shareablemaps.APP_URL}${response.data.mapid}`
                 })
                 .catch((error) => {
                     const errors = error.response.data.errors
