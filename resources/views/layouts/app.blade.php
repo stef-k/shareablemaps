@@ -24,6 +24,19 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- Social Sharing -->
+        <meta property="og:site_name"               content="Shareable Maps" />
+        <meta property="og:type"                    content="article" />
+        <meta property="og:title"                   content="Shareable Travel Maps" />
+        <meta property="og:description"             content="Free shareable travel travel maps that load on your Google Maps application." />
+        <meta property="og:image"                   content="https://shareablemaps.com/img/icon-1024.png" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Shareable Travel Maps"/>
+        <meta name="twitter:description" content="Free shareable travel travel maps that load on your Google Maps application."/>
+        <meta name="twitter:image" content="https://shareablemaps.com/img/icon-1024.png"/>
+
     </head>
 
     <body>
