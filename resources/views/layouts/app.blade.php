@@ -30,12 +30,12 @@
         <meta property="og:type"                    content="article" />
         <meta property="og:title"                   content="Shareable Travel Maps" />
         <meta property="og:description"             content="Free shareable travel travel maps that load on your Google Maps application." />
-        <meta property="og:image"                   content="https://shareablemaps.com/icon-1024.png" />
+        <meta property="og:image"                   content="https://shareablemaps.com/icon-1024.jpg" />
 
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Shareable Travel Maps"/>
         <meta name="twitter:description" content="Free shareable travel travel maps that load on your Google Maps application."/>
-        <meta name="twitter:image" content="https://shareablemaps.com/icon-1024.png"/>
+        <meta name="twitter:image" content="https://shareablemaps.com/icon-1024.jpg"/>
 
     </head>
 
