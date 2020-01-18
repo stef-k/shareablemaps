@@ -9,6 +9,7 @@
         </div>
         <div class="col-12 pl-lg-5 pr-lg-5">
             <button type="button" class="btn btn-primary" id="saveMap" title="Save map">Save Map</button>
+             <a class="btn btn-secondary ml-5" href={{ route('mapslist') }}>Maps List</a>
             <button type="button" class="btn btn-danger float-right deleteMap" data-mapid="{{ $map->id }}" data-mapname="{{ $map->name }}" title="Delete map">Delete
                 Map</button>
         </div>

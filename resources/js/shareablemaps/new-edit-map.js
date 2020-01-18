@@ -12,16 +12,29 @@ export class MapEditor {
             this.addNewTagField()
             this.deleteTag()
             this.saveMap()
+            this.saveNewMap()
         }
         this.deleteMap()
     }
 
     bootstrapAutoComplete() {
         $('.tag-autocomplete').autoComplete({
-            resolverSettings: {
-                url: '/api/v1/tags'
-            },
+            resolver: 'custom',
             minLength: 1,
+            events: {
+                search: function (qry, callback) {
+                    // let's do a custom ajax call
+                    $.ajax(
+                        '/api/v1/places-filtered', {
+                            data: {
+                                'term': qry
+                            }
+                        }
+                    ).done(function (res) {
+                        callback(res)
+                    });
+                }
+            }
         });
     }
 
@@ -83,7 +96,7 @@ export class MapEditor {
 
             this.swal.fire({
                 title: 'Really delete Map?',
-                text: `Do you really want to delete the ${$(e.target).data('mapname')} map with ID: ${$(e.target).data('mapid')} ???`,
+                text: `Really delete map ${$(e.target).data('mapname')} map with ID: ${$(e.target).data('mapid')} ???`,
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'DELET MAP!'
@@ -133,6 +146,33 @@ export class MapEditor {
                     window.shareablemaps.swal.fire({
                         icon: 'error',
                         text: error
+                    })
+                })
+        })
+    }
+
+    async saveNewMap() {
+        $('#saveNewMap').click((e) => {
+            e.preventDefault()
+            let content = this.editor.innerHTML
+            let serialized = $('.editMapForm').serialize()
+            serialized += `&details=${content}`
+
+            axios.post(`${window.shareablemaps.APP_URL}/admin/maps/new`, serialized)
+                .then((response) => {
+                    // window.location = `${window.shareablemaps.APP_URL}${response.data.mapid}`
+                })
+                .catch((error) => {
+                    const errors = error.response.data.errors
+                    let text = ''
+                    for (let key in errors) {
+                        if (errors.hasOwnProperty(key)) {
+                            text += '<strong>' + key + '</strong>: ' + errors[key] + '<br>'
+                        }
+                    }
+                    window.shareablemaps.swal.fire({
+                        icon: 'error',
+                        html: text
                     })
                 })
         })

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NewMapRequest;
 use App\Map;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -34,6 +35,41 @@ class MapController extends Controller
         $map = Map::with('tags')->findOrFail($id);
 
         return view('admin.editmap', ['map' => $map]);
+    }
+
+    public function newMap()
+    {
+        return view('admin.newmap');
+    }
+
+    public function saveNewMap(NewMapRequest $request)
+    {
+        $url           = $request->input('url');
+        $name          = $request->input('name');
+        $suggestedDays = $request->input('suggestedDays');
+        $details       = $request->input('details');
+        $tags          = $request->input('tags');
+
+        $map                 = new Map();
+        $map->url            = $url;
+        $map->name           = $name;
+        $map->suggested_days = $suggestedDays;
+        $map->details        = $details;
+
+        $map->save();
+
+        if (!empty($tags)) {
+            foreach ($tags as $tag) {
+                $t = Tag::firstOrCreate(['name' => \Str::title($tag)]);
+                $map->tags()->attach($t);
+            }
+        }
+
+        \flash('Map with name: '.$map->name.' and ID: '.$map->id.' has been successfully created.')->info();
+        return \response()->json([
+            'message' => 'Map with name: '.$map->name.' and ID: '.$map->id.' has been successfully created.',
+            'mapid'   => $map->id,
+        ], 200);
     }
 
     public function deleteMap($id)

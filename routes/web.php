@@ -37,6 +37,8 @@ Route::get('/', 'IndexController@index')->name('index');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('mapslist', 'MapController@mapslist')->name('mapslist');
+    Route::get('maps/new', 'MapController@newMap')->name('newmap');
+    Route::post('maps/new', 'MapController@saveNewMap')->name('savenewmap');
     Route::get('maps/{id}', 'MapController@showMap')->name('showmap');
     Route::post('maps/{id}/delete', 'MapController@deleteMap')->name('deletemap');
     Route::post('maps/{id}/save', 'MapController@saveMap');

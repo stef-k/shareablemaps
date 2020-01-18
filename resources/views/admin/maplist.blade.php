@@ -3,8 +3,12 @@
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col text-center">
+        <div class="col-12 text-center">
             <h1 class="h1">List of all Maps</h1>
+        </div>
+
+        <div class="col-12 mb-2">
+            <a class="btn btn-primary" href={{ route('newmap') }}>New Map</a>
         </div>
     </div>
 
