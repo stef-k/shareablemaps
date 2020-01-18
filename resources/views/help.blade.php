@@ -6,7 +6,7 @@
         <div class="col">
             <h1 class="h1 text-center" id="top">Help</h1>
 
-            <h2 class="h2 mt-5">Contents</h2>
+            <h3 class="h3 mt-5">Help Contents</h3>
 
             <ul>
                 <li>

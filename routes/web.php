@@ -15,6 +15,10 @@ Route::get('/help', function () {
     return view('help');
 })->name('help');
 
+Route::get('/showcase', function () {
+    return view('showcase');
+})->name('showcase');
+
 Route::get('/contact', 'MailController@show')->name('contact');
 Route::post('/contact', 'MailController@postMail')->name('postMail');
 
