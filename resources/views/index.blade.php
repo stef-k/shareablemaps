@@ -22,7 +22,10 @@
                 <input type="text" autocomplete="off" class="form-control form-control-lg" id="searchMaps" type="text"
                     placeholder="Type a Continent, a Country name, a City or a Place">
                 <small id="searchMaps" class="text-muted">Filter the maps using Continents, Country names, Cities or
-                    Places</small>
+                    Places</small><br>
+                    <small class="text-muted">You can also filter maps by clicking on the <span class="badge badge-info">tags</span> of each map bellow
+                    <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </small>
             </div>
 
             <div class="col-2">

@@ -35,8 +35,9 @@ export default class Landing {
         start = `<div class="col-md-6 col-sm-12 mt-4 maptileParent">
         <div class="card">
             <div class="card-header bg-primary text-white mapname" data-mapname="${data.name}">${data.name}
-            <button type="button" class="btn btn-link float-right text-white btn-sm" title="Click to learn about the map symbols" data-toggle="modal"
-            data-target="#mapLegend">Map legend</button>
+            <button type="button" class="btn btn-link float-right text-white btn-sm"
+            title="Click to learn about the map symbols" data-toggle="modal" data-target="#mapLegend">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>  Map Legend </button>
             </div>
             <iframe src="${data.url}" class="maptile"></iframe>
             <div class="card-body normal-text">Tags: `

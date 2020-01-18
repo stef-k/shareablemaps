@@ -14,8 +14,8 @@
             <div class="card">
                 <div class="card-header bg-primary text-white">{{ $map->name }}
                     <button type="button" class="btn btn-link float-right text-white btn-sm"
-                        title="Click to learn about the map symbols" data-toggle="modal" data-target="#mapLegend">Map
-                        legend</button>
+                        title="Click to learn about the map symbols" data-toggle="modal" data-target="#mapLegend">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>  Map Legend </button>
                 </div>
                 <iframe src="{{ $map->url  }}" class="maptile"></iframe>
                 <div class="card-body normal-text">
