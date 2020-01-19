@@ -37,6 +37,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('mapslist') }}">Map List</a>
+                            <a class="dropdown-item" href={{ route('tags') }}>Tags</a>
                             <a class="dropdown-item" href="{{ route('newmap') }}">New Map</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"

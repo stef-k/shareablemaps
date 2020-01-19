@@ -12,6 +12,7 @@
              <a class="btn btn-secondary ml-5" href={{ route('mapslist') }}>Maps List</a>
             <button type="button" class="btn btn-danger float-right deleteMap" data-mapid="{{ $map->id }}" data-mapname="{{ $map->name }}" title="Delete map">Delete
                 Map</button>
+                <a class="btn btn-primary ml-4" href={{ route('tags') }}>Tags</a>
         </div>
     </div>
 

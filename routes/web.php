@@ -48,7 +48,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::post('maps/{id}/delete', 'MapController@deleteMap')->name('deletemap');
     Route::post('maps/{id}/save', 'MapController@saveMap');
     // Tags
-    Route::get('tags', 'TagController@showTags');
+    Route::get('tags', 'TagController@showTags')->name('tags');
     Route::post('tags', 'TagController@edit');
     Route::post('tags/{id}/delete', 'TagController@deleteTag');
 });

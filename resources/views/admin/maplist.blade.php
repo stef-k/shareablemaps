@@ -9,6 +9,7 @@
 
         <div class="col-12 mb-2">
             <a class="btn btn-primary" href={{ route('newmap') }}>New Map</a>
+            <a class="btn btn-primary ml-4" href={{ route('tags') }}>Tags</a>
         </div>
     </div>
 
