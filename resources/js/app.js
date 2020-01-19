@@ -7,6 +7,7 @@
 require('./bootstrap');
 import Swal from 'sweetalert2'
 import Landing from './shareablemaps/landing'
+import TagEditor from './shareablemaps/tag-editor'
 // window.Vue = require('vue');
 
 /**
@@ -51,3 +52,6 @@ landing.setupEventListeners()
 
 const mapEditor = new MapEditor()
 mapEditor.addEventListeners()
+
+const tagEditor = new TagEditor()
+tagEditor.setupEventListeners()

@@ -18,9 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1'], function () {
-    Route::get('tags', 'TagController@tags');
     Route::get('places', 'IndexController@getNames');
     Route::get('places-filtered', 'IndexController@getNamesFiltered');
     Route::get('filter-places/{name}', 'IndexController@getPlaces');
     Route::get('maps', 'MapController@mapsListData');
+    // Tags
+    Route::get('tags', 'TagController@tags');
 });
