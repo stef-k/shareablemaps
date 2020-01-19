@@ -25,24 +25,26 @@ export default class TagEditor {
                 allowOutsideClick: () => !this.swal.isLoading()
             })
             .then((name) => {
-                axios.post(`${window.shareablemaps.APP_URL}/admin/tags/`, {
-                    id: tagId,
-                    name: name.value
-                }).then(response => {
-                    this.swal.fire({
-                        title: 'Saved!',
-                        text: response.data,
-                        icon: 'success'
-                    }).then(() => {
-                        // reload
-                        window.location = `${window.shareablemaps.APP_URL}/admin/tags`
+                if (name.value) {
+                    axios.post(`${window.shareablemaps.APP_URL}/admin/tags/`, {
+                        id: tagId,
+                        name: name.value
+                    }).then(response => {
+                        this.swal.fire({
+                            title: 'Saved!',
+                            text: response.data,
+                            icon: 'success'
+                        }).then(() => {
+                            // reload
+                            window.location = `${window.shareablemaps.APP_URL}/admin/tags`
+                        })
+                    }).catch((error) => {
+                        this.swal.fire({
+                            icon: 'error',
+                            text: error
+                        })
                     })
-                }).catch((error) => {
-                    this.swal.fire({
-                        icon: 'error',
-                        text: error
-                    })
-                })
+                }
             })
     }
 }
