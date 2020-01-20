@@ -103,12 +103,37 @@ iframe {
 }
 
 // to top
-#toTopBtn {
-    position: fixed;
-    bottom: 10px;
-    float: right;
-    right: .5%;
-    max-width: 140px;
-    width: 100%;
-    font-size: .8rem;
+// 600px and smaller screens
+@media only screen and (max-width: 600px) {
+    #toTopBtn {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 1px;
+        max-width: 28px;
+        width: 100%;
+        font-size: 27px;
+        opacity: 60%;
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+}
+// 768px and wider  screens
+@media only screen and (min-width: 768px) {
+    #toTopBtn {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 10px;
+        max-width: 40px;
+        width: 100%;
+        font-size: 35px;
+        opacity: 60%;
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
 }

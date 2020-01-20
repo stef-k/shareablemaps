@@ -173,8 +173,19 @@ export default class Landing {
     }
 
     scrollToTop() {
-        $('#toTopBtn').click(() => {
-            console.log('to top')
+        let toTop = $('#toTopBtn')
+        if (window.pageYOffset < 300) {
+            toTop.removeClass('visible').addClass('invisible')
+        }
+        $(document).scroll(function() {
+            if ($(window).scrollTop() < 300) {
+                toTop.removeClass('visible').addClass('invisible')
+            } else {
+                toTop.removeClass('invisible').addClass('visible')
+            }
+          })
+
+        toTop.click(() => {
             $(window).scrollTop(0)
         })
     }

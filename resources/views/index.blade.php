@@ -20,8 +20,8 @@
 <div class="container">
     <form>
         <div class="form-row align-items-center">
-            <label for="searchMaps" class="col-2 col-form-label "><strong class="x1quarter"> Search Maps:</strong></label>
-            <div class="col-8">
+            <label for="searchMaps" class="col-sm-4 col-lg-2 col-form-label "><strong class="x1quarter"> Search Maps:</strong></label>
+            <div class="col-sm-8 col-lg-8">
                 <input type="text" autocomplete="off" class="form-control form-control-lg" id="searchMaps" type="text"
                     placeholder="Type a Continent, a Country name, a City or a Place">
                 <small id="searchMaps" class="text-muted">Filter the maps using Continents, Country names, Cities or
@@ -31,8 +31,8 @@
                     </small>
             </div>
 
-            <div class="col-2">
-                <button type="button" class="btn btn-primary form-control-lg clearFilter">Clear Filter</button>
+            <div class="col-sm-12 col-lg-2">
+                <button type="button" class="btn btn-primary form-control-lg float-right gclearFilter">Clear Filter</button>
             </div>
         </div>
     </form>
@@ -119,5 +119,4 @@
         </div>
     </div>
 </div>
-<button  id="toTopBtn" class="btn-link btn btn-sm "><strong>Scroll <i class="fa fa-chevron-up" aria-hidden="true"></i></strong></a>
 @endsection
