@@ -113,11 +113,6 @@ iframe {
         max-width: 28px;
         width: 100%;
         font-size: 27px;
-        opacity: 60%;
-
-        &:hover {
-            opacity: 100%;
-        }
     }
 }
 // 768px and wider  screens
@@ -130,10 +125,5 @@ iframe {
         max-width: 40px;
         width: 100%;
         font-size: 35px;
-        opacity: 60%;
-
-        &:hover {
-            opacity: 100%;
-        }
     }
 }

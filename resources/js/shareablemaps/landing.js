@@ -56,7 +56,24 @@ export default class Landing {
             <p class="card-text">${data.details}</p>
         </div>
         <div class="card-footer text-muted">
-            <a href="#" class="card-link socialShare" title="Share this map on social media" data-toggle="modal" data-target="#${data.name + data.id}">
+            <a href="#" class="c<script>
+    $(document).ready(function() {
+        var toTop = $('#toTopBtn');
+        if (window.pageYOffset < 300) {
+            toTop.removeClass('visible').addClass('invisible');
+        }
+        $(document).scroll(function() {
+            if ($(window).scrollTop() < 300) {
+                toTop.removeClass('visible').addClass('invisible');
+            } else {
+                toTop.removeClass('invisible').addClass('visible');
+            }
+            })
+        toTop.click(() => {
+            $(window).scrollTop(0);
+        })
+    })
+</script>ard-link socialShare" title="Share this map on social media" data-toggle="modal" data-target="#${data.name + data.id}">
             <i class="fa fa-share-alt" aria-hidden="true"></i>
             Share</a>
             <a href="${data.url.replace('embed', 'viewer')}" data-fullscreenlink="${data.url.replace('embed', 'viewer')}"
@@ -173,7 +190,7 @@ export default class Landing {
     }
 
     scrollToTop() {
-        $(document).ready(() => {
+        $(document).ready(()=> {
             let toTop = $('#toTopBtn')
             if (window.pageYOffset < 300) {
                 toTop.removeClass('visible').addClass('invisible')
