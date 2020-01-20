@@ -173,20 +173,22 @@ export default class Landing {
     }
 
     scrollToTop() {
-        let toTop = $('#toTopBtn')
-        if (window.pageYOffset < 300) {
-            toTop.removeClass('visible').addClass('invisible')
-        }
-        $(document).scroll(function() {
-            if ($(window).scrollTop() < 300) {
+        $(document).ready(() => {
+            let toTop = $('#toTopBtn')
+            if (window.pageYOffset < 300) {
                 toTop.removeClass('visible').addClass('invisible')
-            } else {
-                toTop.removeClass('invisible').addClass('visible')
             }
-          })
+            $(document).scroll(function() {
+                if ($(window).scrollTop() < 300) {
+                    toTop.removeClass('visible').addClass('invisible')
+                } else {
+                    toTop.removeClass('invisible').addClass('visible')
+                }
+              })
 
-        toTop.click(() => {
-            $(window).scrollTop(0)
+            toTop.click(() => {
+                $(window).scrollTop(0)
+            })
         })
     }
 }
