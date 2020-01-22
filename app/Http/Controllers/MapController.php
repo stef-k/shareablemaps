@@ -60,12 +60,15 @@ class MapController extends Controller
 
         if (!empty($tags)) {
             foreach ($tags as $tag) {
-                $t = Tag::firstOrCreate(['name' => \Str::title($tag)]);
-                $map->tags()->attach($t);
+                if ($tag !== '') {
+                    $t = Tag::firstOrCreate(['name' => \Str::title($tag)]);
+                    $map->tags()->attach($t);
+                }
             }
         }
 
         \flash('Map with name: '.$map->name.' and ID: '.$map->id.' has been successfully created.')->info();
+
         return \response()->json([
             'message' => 'Map with name: '.$map->name.' and ID: '.$map->id.' has been successfully created.',
             'mapid'   => $map->id,
@@ -99,14 +102,18 @@ class MapController extends Controller
 
             $tags = $request->input('tags');
 
-            foreach ($tags as $tag) {
-                $t = Tag::firstOrCreate(['name' => \Str::title($tag)]);
-                if ($map) {
-                    if (!$t->maps()->exists()) {
-                        try {
-                            $map->tags()->attach($t);
-                        } catch (\Throwable $th) {
-                            // do nothing we won't reach here after all the above checks
+            if (!empty($tags)) {
+                foreach ($tags as $tag) {
+                    if ($tag !== '') {
+                        $t = Tag::firstOrCreate(['name' => \Str::title($tag)]);
+                        if ($map) {
+                            if (!$t->maps()->exists()) {
+                                try {
+                                    $map->tags()->attach($t);
+                                } catch (\Throwable $th) {
+                                    // do nothing we won't reach here after all the above checks
+                                }
+                            }
                         }
                     }
                 }
