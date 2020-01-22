@@ -183,9 +183,12 @@ export default class Landing {
 
     clearFilter() {
         $('.clearFilter').click((e) => {
-            $('#searchMaps').val('')
-            this.bootstrap()
-            $('.clearFilter').removeClass('btn-info').addClass('btn-primary')
+            let searchField = $('#searchMaps')
+            if (searchField.val() !== '') {
+                searchField.val('')
+                this.bootstrap()
+                $('.clearFilter').removeClass('btn-info').addClass('btn-primary')
+            }
         })
     }
 

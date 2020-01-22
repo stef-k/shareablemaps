@@ -18,7 +18,7 @@
 </div>
 
 <div class="container">
-    <form>
+    <div>
         <div class="form-row align-items-center">
             <label for="searchMaps" class="col-sm-4 col-lg-2 col-form-label "><strong class="x1quarter"> Search Maps:</strong></label>
             <div class="col-sm-8 col-lg-8">
@@ -32,10 +32,10 @@
             </div>
 
             <div class="col-sm-12 col-lg-2">
-                <button type="button" class="btn btn-primary form-control-lg float-right gclearFilter">Clear Filter</button>
+                <button type="button" class="btn btn-primary form-control-lg float-right clearFilter">Clear Filter</button>
             </div>
         </div>
-    </form>
+    </div>
 
     {{-- <button type="button" class="btn btn-link m-0 p-0" title="Click to learn about the map symbols" data-toggle="modal"
         data-target="#mapLegend">Map legend</button> --}}
