@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed2767393cb7f820840108d865e1c6ea",
+    "content-hash": "f7e2ef9a970a7b5f41e3c12bbe0f70f0",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -628,69 +628,6 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
-        },
-        {
-            "name": "ipunkt/laravel-analytics",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ipunkt/laravel-analytics.git",
-                "reference": "9e7ec193cb3e903754f3906a7c403feb5ea5ffa8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ipunkt/laravel-analytics/zipball/9e7ec193cb3e903754f3906a7c403feb5ea5ffa8",
-                "reference": "9e7ec193cb3e903754f3906a7c403feb5ea5ffa8",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/config": "~5.0 || ^6.0",
-                "illuminate/session": "~5.0 || ^6.0",
-                "illuminate/support": "~5.0 || ^6.0",
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "laravel/framework": "~5.0 || ^6.0"
-            },
-            "suggest": {
-                "martijnc/php-csp": "For handling Content Security Policy matters"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Ipunkt\\LaravelAnalytics\\AnalyticsServiceProvider"
-                    ],
-                    "aliases": {
-                        "Analytics": "Ipunkt\\LaravelAnalytics\\AnalyticsFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Ipunkt\\LaravelAnalytics\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Kummer",
-                    "email": "r.kummer@ipunkt.biz"
-                }
-            ],
-            "description": "Analytics tracking for Laravel",
-            "keywords": [
-                "analytics",
-                "google analytics",
-                "javascript",
-                "laravel",
-                "php",
-                "statistics"
-            ],
-            "time": "2019-09-05T06:46:03+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
