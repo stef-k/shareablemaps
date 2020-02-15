@@ -36,7 +36,7 @@
         <meta name="twitter:title" content="Shareable Travel Maps"/>
         <meta name="twitter:description" content="Free shareable travel travel maps that load on your Google Maps application."/>
         <meta name="twitter:image" content="https://shareablemaps.com/icon-1024.jpg"/>
-
+        {!! Analytics::render() !!}
     </head>
 
     <body>
